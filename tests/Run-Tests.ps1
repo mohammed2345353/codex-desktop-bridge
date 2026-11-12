@@ -94,7 +94,7 @@ exit 0
         & $hostExe -NoProfile -File (Join-Path $scripts 'Start-Bridge.ps1') -Workspace $workspace -Mode Review -Prompt 'one & two'
         Assert-True ($LASTEXITCODE -eq 0) 'Launcher failed.'
         $captured = @(Get-Content -LiteralPath $env:BRIDGE_TEST_CAPTURE -Raw | ConvertFrom-Json)
-        Assert-True ($captured[-1] -eq 'one & two' -and $captured -contains 'approvals_reviewer=auto_review') 'CLI arguments changed.'
+        Assert-True ($captured[-1] -eq 'one & two' -and $captured -contains 'approvals_reviewer=auto_review') ('CLI arguments changed: ' + (ConvertTo-Json -InputObject $captured -Compress))
     }
     Test-Case 'Environment report distinguishes untested tools' {
         $report = & (Join-Path $scripts 'Test-BridgeEnvironment.ps1') -Workspace $workspace -AsJson | ConvertFrom-Json
