@@ -8,6 +8,13 @@
 
 المتطلبات: Windows وPowerShell 5.1 أو 7 وCodex CLI مثبت ومسجل الدخول. راجع السكربتات قبل تشغيلها. لا تحتاج تشغيل كمسؤول ولا تغيير Execution Policy من أجل المشروع؛ إذا سياسة جهازك تمنع السكربتات، اتبع إعدادات جهازك المعتمدة.
 
+نزّل المشروع باستخدام Git:
+
+```powershell
+git clone https://github.com/mohammed2345353/codex-desktop-bridge.git
+Set-Location codex-desktop-bridge
+```
+
 من مجلد المشروع، اختَر مجلد عمل موجوداً:
 
 ```powershell

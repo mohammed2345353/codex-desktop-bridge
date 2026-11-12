@@ -4,13 +4,22 @@ Windows task coordination for Codex: a reusable skill, project setup, diagnostic
 
 [العربية](README.ar.md)
 
+[![Windows checks](https://github.com/mohammed2345353/codex-desktop-bridge/actions/workflows/windows.yml/badge.svg)](https://github.com/mohammed2345353/codex-desktop-bridge/actions/workflows/windows.yml)
+
 **Status: 0.1.0 preview.** This project supplies workflow instructions and PowerShell helpers. Desktop Commander and computer-use capabilities come from separately available tools; they are not bundled or remotely exposed by this repository.
 
 ## Quick start
 
 Requirements: Windows, PowerShell 5.1 or 7, Codex CLI installed and signed in. Review downloaded scripts first. The scripts do not require administrator mode or change execution policy.
 
-Run from the cloned repository, choosing an existing project folder:
+Download the source with Git, then choose an existing project folder:
+
+```powershell
+git clone https://github.com/mohammed2345353/codex-desktop-bridge.git
+Set-Location codex-desktop-bridge
+```
+
+Run from that repository:
 
 ```powershell
 .\scripts\Test-BridgeEnvironment.ps1 -Workspace 'C:\Projects\MyProject'
@@ -76,4 +85,4 @@ Documentation checked 2026-11-13:
 - [MCP setup](https://learn.chatgpt.com/docs/extend/mcp?surface=cli)
 - [App Server](https://learn.chatgpt.com/docs/app-server)
 
-For publishing: create a public `codex-desktop-bridge` repository, push this source, run Windows CI, and label the release as preview. GitHub publication is separate from ChatGPT plugin-directory submission.
+The source is public at [mohammed2345353/codex-desktop-bridge](https://github.com/mohammed2345353/codex-desktop-bridge). The preview is distributed as source. GitHub publication is separate from ChatGPT plugin-directory submission.
