@@ -2,7 +2,7 @@
 
 Windows task coordination for Codex: a reusable skill, project setup, diagnostics, and session launch modes that reduce repeated interruptions.
 
-[???????](README.ar.md)
+[العربية](README.ar.md)
 
 **Status: 0.1.0 preview.** This project supplies workflow instructions and PowerShell helpers. Desktop Commander and computer-use capabilities come from separately available tools; they are not bundled or remotely exposed by this repository.
 
