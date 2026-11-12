@@ -3,13 +3,17 @@ on: [push, pull_request]
 permissions:
   contents: read
 jobs:
-  test:
+  powershell-7:
     runs-on: windows-latest
-    strategy:
-      matrix:
-        shell: [pwsh, powershell]
     steps:
       - uses: actions/checkout@v4
       - name: Run tests
-        shell: ${{ matrix.shell }}
+        shell: pwsh
+        run: .\tests\Run-Tests.ps1
+  windows-powershell-51:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        shell: powershell
         run: .\tests\Run-Tests.ps1
