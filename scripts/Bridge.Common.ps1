@@ -40,7 +40,7 @@ function Get-BridgeArguments {
           [string[]]$AdditionalDirectory = @(), [string]$Prompt)
     $result = @('--cd', $Workspace, '--sandbox', 'workspace-write', '--ask-for-approval')
     if ($Mode -eq 'Quiet') { $result += 'never' } else { $result += 'on-request' }
-    if ($Mode -eq 'Review') { $result += @('-c', 'approvals_reviewer="auto_review"') }
+    if ($Mode -eq 'Review') { $result += @('-c', 'approvals_reviewer=auto_review') }
     foreach ($directory in $AdditionalDirectory) { $result += @('--add-dir', (Resolve-BridgeWorkspace $directory)) }
     if ($Prompt) { $result += @('--', $Prompt) }
     return $result

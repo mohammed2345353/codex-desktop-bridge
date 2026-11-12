@@ -48,7 +48,7 @@ try {
         $extra = Join-Path $tempRoot 'assets [selected]'
         New-Item -ItemType Directory -Path $extra | Out-Null
         $run = & (Join-Path $scripts 'Start-Bridge.ps1') -Workspace $workspace -Mode Review -AdditionalDirectory $extra -DryRun
-        Assert-True ($run.Arguments -contains 'approvals_reviewer="auto_review"') 'Reviewer missing.'
+        Assert-True ($run.Arguments -contains 'approvals_reviewer=auto_review') 'Reviewer missing.'
         Assert-True ($run.Arguments[-1] -eq $extra) 'Extra directory not literal.'
     }
     Test-Case 'Missing workspace is rejected' {
@@ -94,7 +94,7 @@ exit 0
         & $hostExe -NoProfile -File (Join-Path $scripts 'Start-Bridge.ps1') -Workspace $workspace -Mode Review -Prompt 'one & two'
         Assert-True ($LASTEXITCODE -eq 0) 'Launcher failed.'
         $captured = @(Get-Content -LiteralPath $env:BRIDGE_TEST_CAPTURE -Raw | ConvertFrom-Json)
-        Assert-True ($captured[-1] -eq 'one & two' -and $captured -contains 'approvals_reviewer="auto_review"') 'CLI arguments changed.'
+        Assert-True ($captured[-1] -eq 'one & two' -and $captured -contains 'approvals_reviewer=auto_review') 'CLI arguments changed.'
     }
     Test-Case 'Environment report distinguishes untested tools' {
         $report = & (Join-Path $scripts 'Test-BridgeEnvironment.ps1') -Workspace $workspace -AsJson | ConvertFrom-Json
@@ -160,3 +160,4 @@ exit 0
     Remove-Item Env:BRIDGE_TEST_CAPTURE -ErrorAction SilentlyContinue
     # Leave disposable test artifacts for inspection; do not recursively delete paths.
 }
+exit 0
