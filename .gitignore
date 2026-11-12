@@ -1,0 +1,9 @@
+.bridge/
+.agents/
+test-results/
+*.log
+*.zip
+*.bundle
+.env
+.env.*
+__pycache__/

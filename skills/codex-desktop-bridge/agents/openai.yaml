@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Desktop Bridge"
+  short_description: "Coordinate Windows tools with fewer interruptions"
+  default_prompt: "Use $codex-desktop-bridge to complete this Windows task with the tools available in this session."
