@@ -93,7 +93,7 @@ exit 0
     Test-Case 'Launcher invokes CLI with literal arguments' {
         & $hostExe -NoProfile -File (Join-Path $scripts 'Start-Bridge.ps1') -Workspace $workspace -Mode Review -Prompt 'one & two'
         Assert-True ($LASTEXITCODE -eq 0) 'Launcher failed.'
-        $captured = @(Get-Content -LiteralPath $env:BRIDGE_TEST_CAPTURE -Raw | ConvertFrom-Json)
+        $captured = Get-Content -LiteralPath $env:BRIDGE_TEST_CAPTURE -Raw | ConvertFrom-Json
         Assert-True ($captured[-1] -eq 'one & two' -and $captured -contains 'approvals_reviewer=auto_review') ('CLI arguments changed: ' + (ConvertTo-Json -InputObject $captured -Compress))
     }
     Test-Case 'Environment report distinguishes untested tools' {
@@ -102,7 +102,7 @@ exit 0
     }
     Test-Case 'MCP registration uses caller arguments' {
         & (Join-Path $scripts 'Connect-DesktopCommander.ps1') -ServerExecutable $hostExe -ServerArgument @('-NoProfile','-File','C:\Tools\server [one].ps1') | Out-Null
-        $captured = @(Get-Content -LiteralPath $env:BRIDGE_TEST_CAPTURE -Raw | ConvertFrom-Json)
+        $captured = Get-Content -LiteralPath $env:BRIDGE_TEST_CAPTURE -Raw | ConvertFrom-Json
         Assert-True ($captured[0] -eq 'mcp' -and $captured[1] -eq 'add' -and $captured[-1] -eq 'C:\Tools\server [one].ps1') 'MCP arguments changed.'
     }
     Test-Case 'MCP WhatIf does not register' {
