@@ -1,6 +1,6 @@
 ---
 name: codex-desktop-bridge
-description: "Coordinate local Windows tasks across PowerShell, Desktop Commander, and computer-use tools. Use for laptop automation, diagnosing missing desktop capabilities, or continuing an authorized task with fewer repeated confirmations. Requires the relevant tools to be available in the current session."
+description: "Plan manual AI workflows on Windows: discover local tool evidence, confirm account access, recommend tools by purpose, and prepare ordered tasks for an offline flowchart. Also coordinate authorized PowerShell and desktop tasks using available tools. Never infer subscriptions or execute a workflow automatically."
 ---
 
 # Codex Desktop Bridge

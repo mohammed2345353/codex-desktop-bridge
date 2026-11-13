@@ -16,6 +16,9 @@ jobs:
       - name: Test offline workflow transitions
         shell: pwsh
         run: node .\tests\Test-WorkflowUI.cjs
+      - name: Test complete starter journey
+        shell: pwsh
+        run: .\tests\Test-StartWorkflow.ps1
   windows-powershell-51:
     runs-on: windows-latest
     steps:
@@ -26,3 +29,6 @@ jobs:
       - name: Test local workflow planner
         shell: powershell
         run: .\tests\Test-AIWorkflow.ps1
+      - name: Test complete starter journey
+        shell: powershell
+        run: .\tests\Test-StartWorkflow.ps1

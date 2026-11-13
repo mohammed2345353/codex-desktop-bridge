@@ -1,5 +1,21 @@
 # Preview validation
 
+## Primary project 0.2.0
+
+The unified starter was tested locally on PowerShell 7.6.9 through its demo,
+goal-brief/template preparation and plan generation. Tests confirm unique output
+names, literal UTF-8 goals, private default tasks, unknown-account blocking,
+corrupt-state preservation, explicit manual account save/decline/disable, and
+backup of previous account settings. No real account is enabled by these tests.
+
+The earlier workflow extension passed GitHub Windows checks on both PowerShell
+7 and 5.1, including 16 legacy cases and 13 workflow groups plus the Node UI state
+harness: [run 43342921118](https://github.com/mohammed2345353/codex-desktop-bridge/actions/runs/43342921118),
+commit `de28a1e86c650476a27d0c6548768012b35fe371`.
+The updated workflow additionally runs the complete starter journey on both
+PowerShell versions. A passing run must be verified for the final published
+commit; prior passing runs are not proof for later changes.
+
 ## AI workflow extension — 2026-11-13
 
 Local Windows PowerShell 7.6.9: original regression suite passed 15 cases; one
