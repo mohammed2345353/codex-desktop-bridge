@@ -1,0 +1,2 @@
+# Preserve vendored bytes across Windows checkouts for SHA-256 verification.
+vendor/** -text
