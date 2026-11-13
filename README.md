@@ -1,6 +1,6 @@
-# Codex Desktop Bridge — AI Workflow Planner
+# Codex Desktop Bridge — AI Workflow Planner & Tool Advisor
 
-[العربية](README.ar.md) · Version **0.2.0** · Windows · Local files · MIT
+[العربية](README.ar.md) · Version **0.3.0** · Windows · Local files · MIT
 
 Turn the AI tools you already have into a clear, numbered workflow. Discover tool
 evidence, manually confirm access and limits, prepare a goal-specific brief for
@@ -12,6 +12,30 @@ This is the primary project in this repository, replacing the old session-helper
 focus. Existing helpers still work; their [original guide](docs/LEGACY-BRIDGE.md)
 is preserved separately. No global installation, background server or API key
 is required by the planner.
+
+## Assistant and PowerShell shortcuts
+
+Understand your skills/plugins, check prerequisites and feature costs, then run
+the next local command yourself. No model is invoked by these commands:
+
+```powershell
+.\Tools.ps1 -Action Inventory | Select-Object skillFiles,scope
+.\Tools.ps1 -Action Search -Query 'motion' | Select-Object name,description,path
+.\Tools.ps1 -Action Recommend -Task 'create a skill' -BudgetUsd 0
+.\Tools.ps1 -Action Open -ToolId vscode -WhatIf
+```
+
+Use `Catalog` to see route IDs, `Confirm` to save user-confirmed feature estimates,
+`Profile` to view them, and `Export` for searchable local reports. Unknown cost
+does not become free. Recommendation is offline keyword matching; the bundled
+AI advisor explains broader tasks and setup. Opening is a separate explicit
+action, never automatic. Local shortcuts do not bypass model quotas.
+
+[Assistant guide](docs/TOOL-ADVISOR.md) · [دليل المساعد](docs/TOOL-ADVISOR.ar.md)
+
+Install both project skills with
+`.\scripts\Install-Skills.ps1 -Workspace 'C:\MyProject'`.
+Existing differing skills require reviewed `-Replace` and are backed up.
 
 ## Start
 

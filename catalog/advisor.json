@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "sourceReviewedOn": "2026-11-13",
+  "notice": "Examples of routes, not an exhaustive tool list or pricing table. Feature cost and access must be confirmed separately. Keywords are literal hints, not natural-language reasoning.",
+  "tools": [
+    {
+      "id": "codex", "name": "Codex: coding, review and skill authoring",
+      "keywords": ["code", "coding", "program", "skill", "برمج", "كود", "مهارة", "مهارات", "سكيل"],
+      "requirements": ["Supported Codex interface", "User-confirmed account access for this task"],
+      "costNote": "Plan sign-in and API billing are separate; no entitlement or remaining allowance is inferred.",
+      "source": "https://github.com/openai/codex",
+      "launch": {"kind": "web", "url": "https://chatgpt.com/codex"}
+    },
+    {
+      "id": "vscode", "name": "VS Code: local project editing",
+      "keywords": ["code", "coding", "project", "برمج", "كود", "مشروع"],
+      "requirements": ["Installed VS Code", "For AI assistance: separately confirmed extension and provider access"],
+      "costNote": "Opening the editor does not call a model. AI extension/provider costs remain separate.",
+      "source": "https://code.visualstudio.com/",
+      "launch": {"kind": "app", "localAppPaths": ["Programs/Microsoft VS Code/Code.exe"], "programFilesPaths": ["Microsoft VS Code/Code.exe"]}
+    },
+    {
+      "id": "photoshop", "name": "Photoshop: manual image editing",
+      "keywords": ["image", "photo", "cover", "غلاف", "صور", "صورة", "تصميم"],
+      "requirements": ["Installed and activated Photoshop", "Generation is outside this manual-editing route"],
+      "costNote": "Confirm manual editing access. Generative features require a separate cost/access check.",
+      "source": "https://helpx.adobe.com/photoshop/desktop.html",
+      "launch": {"kind": "app", "localAppPaths": [], "programFilesPaths": ["Adobe/Adobe Photoshop 2027/Photoshop.exe", "Adobe/Adobe Photoshop 2026/Photoshop.exe"]}
+    },
+    {
+      "id": "premiere", "name": "Premiere: manual video editing",
+      "keywords": ["video", "reel", "edit", "فيديو", "مونتاج", "ريل"],
+      "requirements": ["Installed and activated Premiere", "Compatible hardware and user-selected media"],
+      "costNote": "Confirm manual editing access; Firefly generation and premium audio features are separate.",
+      "source": "https://helpx.adobe.com/premiere/desktop.html",
+      "launch": {"kind": "app", "localAppPaths": [], "programFilesPaths": ["Adobe/Adobe Premiere Pro 2027/Adobe Premiere Pro.exe", "Adobe/Adobe Premiere Pro 2026/Adobe Premiere Pro.exe"]}
+    },
+    {
+      "id": "after-effects", "name": "After Effects: manual motion design",
+      "keywords": ["motion", "animation", "موشن", "تحريك", "انيميشن"],
+      "requirements": ["Installed and activated After Effects", "Compatible hardware"],
+      "costNote": "Confirm manual motion design access; external assets, plugins and generation are separate.",
+      "source": "https://helpx.adobe.com/after-effects.html",
+      "launch": {"kind": "app", "localAppPaths": [], "programFilesPaths": ["Adobe/Adobe After Effects 2027/Support Files/AfterFX.exe", "Adobe/Adobe After Effects 2026/Support Files/AfterFX.exe"]}
+    },
+    {
+      "id": "firefly", "name": "Firefly: image/video generation",
+      "keywords": ["generate", "generation", "توليد"],
+      "requirements": ["Adobe service access", "Exact feature/model entitlement and credit cost check"],
+      "costNote": "External generation cost is unknown until confirmed for the exact feature and model.",
+      "source": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html",
+      "launch": {"kind": "web", "url": "https://firefly.adobe.com/"}
+    },
+    {
+      "id": "gemini-web", "name": "Gemini web: writing and analysis",
+      "keywords": ["writing", "research", "analysis", "كتابة", "بحث", "تحليل"],
+      "requirements": ["Google service access", "User-confirmed feature availability and task allowance"],
+      "costNote": "AI Pro is not proof of API credits. This route opens the website only, not Gemini CLI.",
+      "source": "https://gemini.google.com/",
+      "launch": {"kind": "web", "url": "https://gemini.google.com/"}
+    }
+  ]
+}

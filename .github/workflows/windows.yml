@@ -19,6 +19,9 @@ jobs:
       - name: Test complete starter journey
         shell: pwsh
         run: .\tests\Test-StartWorkflow.ps1
+      - name: Test tool advisor and project skill installation
+        shell: pwsh
+        run: .\tests\Test-ToolAdvisor.ps1
   windows-powershell-51:
     runs-on: windows-latest
     steps:
@@ -32,3 +35,6 @@ jobs:
       - name: Test complete starter journey
         shell: powershell
         run: .\tests\Test-StartWorkflow.ps1
+      - name: Test tool advisor and project skill installation
+        shell: powershell
+        run: .\tests\Test-ToolAdvisor.ps1

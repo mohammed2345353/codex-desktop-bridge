@@ -1,5 +1,21 @@
 # Preview validation
 
+## Tool advisor 0.3.0
+
+Local PowerShell 7.6.9: 27 advisor checks passed, including privacy-safe config
+headers, exact-content duplicates, overlapping roots, unknown cost, budget,
+expiration, private-processing restrictions, WhatIf, mocked launch destinations,
+unique export files, and installer preservation/backups. No live programs or
+model services were invoked. The standard Python skill validator was unavailable
+because PyYAML was not installed; structural checks were used without installing it.
+
+Legacy tests: 15 passed and one junction test skipped by the local environment;
+13 workflow groups, the starter journey, and Node UI checks passed. CI runs the
+new suite on both Windows PowerShell 5.1 and PowerShell 7; see the repository's
+Actions for the final commit's result. Simulated skill scenarios are not model
+evaluations or live entitlement checks. Local catalog and launch paths are limited
+to documented routes and do not claim exhaustive plugin coverage.
+
 ## Primary project 0.2.0
 
 The unified starter was tested locally on PowerShell 7.6.9 through its demo,

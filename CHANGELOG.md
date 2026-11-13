@@ -1,5 +1,18 @@
 # Changes
 
+## 0.3.0 — 2026-11-13
+
+- Bundled Plugin and Skill Advisor: task guidance, feature-level prerequisites,
+  processing location, uncertain costs, user-confirmed access, and evidence dates.
+- PowerShell-only Tools.ps1 entry point for metadata inventory, literal search,
+  offline route suggestions, expiring confirmations, and private report export.
+- Separately invoked allowlisted application/site opening with WhatIf support;
+  no task execution, model calls, downloads, or private-file handoff.
+- Project installer for both skills, preflight checks and preserved local backups.
+- Existing planner/menu integration, Arabic/English guides and advisor regression
+  coverage on Windows PowerShell 5.1 and PowerShell 7 in CI.
+- Preserved legacy helpers, workflow planner, account allocation checks and vendors.
+
 ## 0.2.0 — 2026-11-13
 
 The AI workflow planner becomes the primary project in the existing repository.

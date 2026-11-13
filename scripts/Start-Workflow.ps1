@@ -1,8 +1,9 @@
 ﻿#Requires -Version 5.1
 [CmdletBinding()]
 param(
-    [ValidateSet('Menu','Discover','Prepare','Configure','Plan','Demo')][string]$Action='Menu',
+    [ValidateSet('Menu','Discover','Prepare','Configure','Plan','Demo','Inventory','Recommend','Profile')][string]$Action='Menu',
     [string]$StateDirectory,
+    [string]$AdvisorStateDirectory,
     [string]$Goal,
     [string]$TasksPath,
     [ValidateRange(0,1000000)][decimal]$BudgetUsd=0
@@ -14,6 +15,7 @@ $repo=Split-Path $PSScriptRoot -Parent
 if(-not $StateDirectory){$StateDirectory=Join-Path $repo '.bridge/workflow'}
 $StateDirectory=[IO.Path]::GetFullPath($StateDirectory)
 $accountsPath=Join-Path $StateDirectory 'accounts.json'
+if(-not $AdvisorStateDirectory){$AdvisorStateDirectory=Join-Path $repo '.bridge/advisor'}
 
 function Save-WorkflowText {
     param([string]$Name,[string]$Content)
@@ -80,6 +82,16 @@ function Configure-WorkflowAccount {
 function Invoke-WorkflowAction {
     param([string]$SelectedAction)
     switch($SelectedAction){
+        'Inventory' {
+            $inventory=& (Join-Path $PSScriptRoot 'Invoke-ToolAdvisor.ps1') -Action Inventory
+            $inventory | Select-Object skillFiles,scope | Format-List | Out-Host
+            Write-Host 'Use Tools.ps1 -Action Search -Query <term> or -Action Export for searchable details. No model was called.'
+        }
+        'Recommend' {
+            $purpose=$Goal;if([string]::IsNullOrWhiteSpace($purpose)){$purpose=Read-Host 'شنو تريد تنجز؟'}
+            & (Join-Path $PSScriptRoot 'Invoke-ToolAdvisor.ps1') -Action Recommend -Task $purpose -BudgetUsd $BudgetUsd -StateDirectory $AdvisorStateDirectory
+        }
+        'Profile' {& (Join-Path $PSScriptRoot 'Invoke-ToolAdvisor.ps1') -Action Profile -StateDirectory $AdvisorStateDirectory}
         'Discover' {
             $map=Current-WorkflowMap
             $map.providers | Select-Object name,detected,@{Name='manuallyConfirmed';Expression={$null -ne $_.confirmation -and $_.confirmation.available}} | Format-Table -AutoSize | Out-Host
@@ -131,10 +143,11 @@ function Invoke-WorkflowAction {
 if($Action -ne 'Menu'){Invoke-WorkflowAction $Action;return}
 while($true){
     Write-Host "`nCodex Desktop Bridge — منظّم عملك على أدوات AI"
-    Write-Host '1 اكتشاف الأدوات وحفظ تقرير | 2 تأكيد وصولك لأداة | 3 تجهيز طلب حسب هدفك | 4 إنشاء مخطط من خطوات معتمدة | 5 مثال | 0 خروج'
+    Write-Host '1 اكتشاف الأدوات وحفظ تقرير | 2 تأكيد وصولك لأداة | 3 تجهيز طلب حسب هدفك | 4 إنشاء مخطط من خطوات معتمدة | 5 مثال | 6 جرد المهارات | 7 مستشار المهمة | 8 تأكيدات المستشار | 0 خروج'
     $selection=Read-Host 'اختار'
     if($selection -eq '0'){break}
-    $actions=@{'1'='Discover';'2'='Configure';'3'='Prepare';'4'='Plan';'5'='Demo'}
+    $actions=@{'1'='Discover';'2'='Configure';'3'='Prepare';'4'='Plan';'5'='Demo';'6'='Inventory';'7'='Recommend';'8'='Profile'}
     if(-not $actions.ContainsKey($selection)){Write-Host 'اختيار غير صالح.';continue}
     try{Invoke-WorkflowAction $actions[$selection]}catch{Write-Warning $_.Exception.Message}
 }
+
