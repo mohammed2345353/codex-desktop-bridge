@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "providers": [
+    {
+      "id": "codex",
+      "available": false,
+      "access": "unknown",
+      "processing": "unknown",
+      "capabilities": [],
+      "confirmedAt": null,
+      "validUntil": null,
+      "incrementalCostUsd": null,
+      "remainingTasks": null,
+      "note": "Fill from your actual account; no credentials. Do not use demo values for real accounts.",
+      "modelLabel": ""
+    },
+    {
+      "id": "claude",
+      "available": false,
+      "access": "unknown",
+      "processing": "unknown",
+      "capabilities": [],
+      "confirmedAt": null,
+      "validUntil": null,
+      "incrementalCostUsd": null,
+      "remainingTasks": null,
+      "note": "Fill from your actual account; no credentials. Do not use demo values for real accounts.",
+      "modelLabel": ""
+    },
+    {
+      "id": "gemini",
+      "available": false,
+      "access": "unknown",
+      "processing": "unknown",
+      "capabilities": [],
+      "confirmedAt": null,
+      "validUntil": null,
+      "incrementalCostUsd": null,
+      "remainingTasks": null,
+      "note": "Fill from your actual account; no credentials. Do not use demo values for real accounts.",
+      "modelLabel": ""
+    },
+    {
+      "id": "antigravity",
+      "available": false,
+      "access": "unknown",
+      "processing": "unknown",
+      "capabilities": [],
+      "confirmedAt": null,
+      "validUntil": null,
+      "incrementalCostUsd": null,
+      "remainingTasks": null,
+      "note": "Fill from your actual account; no credentials. Do not use demo values for real accounts.",
+      "modelLabel": ""
+    },
+    {
+      "id": "vscode",
+      "available": false,
+      "access": "unknown",
+      "processing": "unknown",
+      "capabilities": [],
+      "confirmedAt": null,
+      "validUntil": null,
+      "incrementalCostUsd": null,
+      "remainingTasks": null,
+      "note": "Fill from your actual account; no credentials. Do not use demo values for real accounts.",
+      "modelLabel": ""
+    },
+    {
+      "id": "adobe-firefly",
+      "available": false,
+      "access": "unknown",
+      "processing": "unknown",
+      "capabilities": [],
+      "confirmedAt": null,
+      "validUntil": null,
+      "incrementalCostUsd": null,
+      "remainingTasks": null,
+      "note": "Fill from your actual account; no credentials. Do not use demo values for real accounts.",
+      "modelLabel": ""
+    },
+    {
+      "id": "ollama",
+      "available": false,
+      "access": "unknown",
+      "processing": "unknown",
+      "capabilities": [],
+      "confirmedAt": null,
+      "validUntil": null,
+      "incrementalCostUsd": null,
+      "remainingTasks": null,
+      "note": "Fill from your actual account; no credentials. Do not use demo values for real accounts.",
+      "modelLabel": ""
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "vendor/google-icons/check_circle.svg",
+      "sha256": "c0c54a0f9902c62caf64aca780dde4600bb97d77091bf81fac4a39f1bbc078fb"
+    },
+    {
+      "path": "vendor/google-icons/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "vendor/graphlib/graphlib.js",
+      "sha256": "c3b4bab2813cbd0d44d1ebfde2a40808ed83eb0c68853cfeef0e0f36b4ef2796"
+    },
+    {
+      "path": "vendor/graphlib/LICENSE",
+      "sha256": "6a349742a6cb219d5a2fc8d0844f6d89a6efc62e20c664450d884fc7ff2d6015"
+    }
+  ]
+}

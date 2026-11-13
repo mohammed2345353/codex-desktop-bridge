@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "sourceReviewedOn": "2026-11-13",
+  "providers": [
+    {
+      "id": "codex",
+      "name": "Codex",
+      "commandFiles": [
+        "codex.exe",
+        "codex.cmd",
+        "codex.ps1"
+      ],
+      "displayNamePattern": "(?i)^Codex(?:\\s|$)",
+      "capabilities": [
+        "coding",
+        "review",
+        "writing"
+      ],
+      "source": "https://developers.openai.com/codex/",
+      "note": "مناسب لكتابة الكود ومراجعته. أكّد واجهة الاستخدام واشتراكك؛ لا نفترض رصيد API."
+    },
+    {
+      "id": "claude",
+      "name": "Claude / Claude Code",
+      "commandFiles": [
+        "claude.exe",
+        "claude.cmd"
+      ],
+      "displayNamePattern": "(?i)^Claude(?:\\s|$)",
+      "capabilities": [
+        "coding",
+        "review",
+        "writing"
+      ],
+      "source": "https://code.claude.com/docs/en/overview",
+      "note": "مناسب للمراجعة والكتابة والكود حسب النموذج المتاح إلك. أكّد وصول الويب أو التطبيق وحدوده."
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini / Gemini CLI",
+      "commandFiles": [
+        "gemini.exe",
+        "gemini.cmd"
+      ],
+      "displayNamePattern": "(?i)^Gemini(?:\\s|$)",
+      "capabilities": [
+        "coding",
+        "review",
+        "writing"
+      ],
+      "source": "https://github.com/google-gemini/gemini-cli",
+      "note": "خيار للكتابة والكود والمراجعة حسب وصولك الفعلي. استخدام الموقع ممكن بتأكيد يدوي."
+    },
+    {
+      "id": "antigravity",
+      "name": "Google Antigravity",
+      "commandFiles": [
+        "antigravity.exe",
+        "antigravity.cmd"
+      ],
+      "displayNamePattern": "(?i)^(?:Google\\s+)?Antigravity(?:\\s|$)",
+      "capabilities": [
+        "coding",
+        "review"
+      ],
+      "source": "https://antigravity.google/",
+      "note": "خيار لمهام تطوير المشروع. وجود المحرّر وحده ما يثبت وصولك للنماذج."
+    },
+    {
+      "id": "vscode",
+      "name": "VS Code + manually confirmed AI extension",
+      "commandFiles": [
+        "code.exe",
+        "code.cmd"
+      ],
+      "displayNamePattern": "(?i)^Microsoft Visual Studio Code(?:\\s|$|\\s*\\()",
+      "capabilities": [
+        "coding",
+        "review"
+      ],
+      "source": "https://code.visualstudio.com/docs/agents/overview",
+      "note": "استخدمه لكتابة وربط ملفات المشروع إذا أكّدت إضافة AI فعّالة والنموذج المتاح؛ اكتشاف المحرّر وحده ما يكفي."
+    },
+    {
+      "id": "adobe-firefly",
+      "name": "Adobe Firefly / Adobe creative tools",
+      "commandFiles": [],
+      "displayNamePattern": "(?i)^Adobe (?:Photoshop|Premiere|After Effects|Creative Cloud)(?:\\s|$)",
+      "capabilities": [
+        "image",
+        "video"
+      ],
+      "source": "https://www.adobe.com/products/firefly.html",
+      "note": "خيار لتجهيز الصور أو الفيديو حسب ميزة Adobe المتاحة إلك. أكّد نوع الميزة ورصيدها قبل التوليد."
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama (confirmed local model)",
+      "commandFiles": [
+        "ollama.exe"
+      ],
+      "displayNamePattern": "(?i)^Ollama(?:\\s|$)",
+      "capabilities": [
+        "writing",
+        "coding",
+        "review"
+      ],
+      "source": "https://docs.ollama.com/",
+      "note": "خيار للكتابة والمراجعة المحلية إذا أكّدت نموذجاً منزّلاً مناسباً. وجود Ollama وحده ما يثبت أن المعالجة محلية."
+    }
+  ]
+}

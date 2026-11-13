@@ -1,5 +1,31 @@
 # Preview validation
 
+## AI workflow extension — 2026-11-13
+
+Local Windows PowerShell 7.6.9: original regression suite passed 15 cases; one
+junction test skipped because junction creation is not permitted. The 13 new
+workflow test groups passed: unconfirmed and expired account rejection, manual
+web access, private/local-only constraints, total budget and task allowances,
+capability matching, balancing, blocked dependencies, malformed requests,
+inert/UTF-8 HTML payloads, non-executing discovery, disabled examples and vendor
+SHA-256 integrity. Node's dependency-free UI harness passed branch/join progress
+transitions, undo descendants, blocked-step gating, cycle detection and rejection
+of invalid or cross-plan progress imports. This is not a rendered-browser test.
+
+A real read-only discovery returned three filename/display-name matches among
+seven catalog tools. Some uninstall registry views/entries were unreadable;
+discovery correctly reported a partial result. No real account was confirmed.
+The demo is synthetic and did not invoke any application or AI. The new command
+returns HTML/JSON; output files were explicitly saved for review.
+
+Windows PowerShell 5.1 execution was rejected by local script execution policy;
+no policy bypass or change was attempted. Both PowerShell versions are covered by
+the updated GitHub workflow; report its run separately rather than inferring CI
+success from these local results. Print/PDF, real model quality, account quotas,
+screen capture and live third-party tool handoff are not validated by this suite.
+The optional free local worker could not start (timeout); no cloud fallback was
+used. All implementation review, integration and verification remained here.
+
 Local environment: Windows, Codex CLI 0.154.0, PowerShell 7.6.9.
 
 GitHub Windows CI passed all 16 tests with no skips on both PowerShell 7.6.9 and Windows PowerShell 5.1. Evidence: [run 43324915507](https://github.com/mohammed2345353/codex-desktop-bridge/actions/runs/43324915507), testing commit `0b5439940ead4a7a804d3a68cb95ea1e317955b1`.

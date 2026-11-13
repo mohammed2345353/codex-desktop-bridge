@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "title": "Plan a short educational reel",
+  "tasks": [
+    {
+      "id": "outline",
+      "title": "1. Write the outline",
+      "capability": "writing",
+      "privacy": "public",
+      "dependsOn": [],
+      "instruction": "Draft a short outline about how a CPU pipeline works. Return the outline only. No commands, uploads or purchases."
+    },
+    {
+      "id": "review",
+      "title": "2. Review the outline",
+      "capability": "review",
+      "privacy": "public",
+      "dependsOn": [
+        "outline"
+      ],
+      "instruction": "Ask me for the completed outline, then check factual clarity. Return corrections for my review."
+    },
+    {
+      "id": "visual",
+      "title": "3. Prepare the visual",
+      "capability": "image",
+      "privacy": "public",
+      "dependsOn": [
+        "review"
+      ],
+      "instruction": "Ask me for the approved outline. Propose a simple pipeline illustration. Wait for my permission before generating an image or consuming credits."
+    },
+    {
+      "id": "edit",
+      "title": "4. Assemble the reel",
+      "capability": "video",
+      "privacy": "public",
+      "dependsOn": [
+        "visual"
+      ],
+      "instruction": "Ask me for the approved outline and visual. Explain an editing sequence in Adobe. Wait for permission before changing project files."
+    }
+  ]
+}

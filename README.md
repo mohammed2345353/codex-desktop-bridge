@@ -1,5 +1,31 @@
 # Codex Desktop Bridge
 
+## New: local AI workflow planner (preview)
+
+Discover installed tool evidence without launching tools, confirm your own access,
+and turn a reviewed task list into an offline, numbered flowchart. It recommends
+tools by capability, cost, privacy and manually declared task allowance. You hand
+off the instructions and mark each reviewed result complete; dependent steps then
+become ready. Undoing a prerequisite also resets its descendants.
+
+```powershell
+# Read-only: no command execution, login inspection or network requests.
+.\scripts\Get-AIToolMap.ps1 -AsJson
+# Self-contained demo: synthetic accounts, no device discovery.
+.\examples\Show-DemoWorkflow.ps1 | Set-Content -LiteralPath demo.html -Encoding UTF8
+# Your plan: fill a LOCAL copy of examples/confirmations.example.json first.
+.\scripts\New-AIWorkflow.ps1 -TasksPath .\examples\tasks.json -ConfirmationsPath .\.bridge\accounts.json -Format Html |
+    Set-Content -LiteralPath workflow.html -Encoding UTF8
+```
+
+Open the HTML yourself. It supports progress download/restore, AI planning advice
+export, and Print / Save PDF. No CDN, server, auto-send, clipboard write or AI call.
+Accounts in the example start disabled. Subscription, model readiness, processing
+location, feature access and remaining allowances are never inferred from an app.
+Web-only tools may be manually confirmed. Read [the workflow guide](docs/AI-WORKFLOW.md)
+and [the source audit](docs/FOUNDATIONS.md). Existing launch helpers below remain
+available and separate; the planner does not call them.
+
 Windows task coordination for Codex: a reusable skill, project setup, diagnostics, and session launch modes that reduce repeated interruptions.
 
 [العربية](README.ar.md)
